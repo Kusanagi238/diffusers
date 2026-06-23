@@ -55,7 +55,7 @@ if is_flax_available():
     _import_structure["vae_flax"] = ["FlaxAutoencoderKL"]
 
 
-if TYPE_CHECKING or DIFFUSERS_SLOW_IMPORT:
+if TYPE_CHECKING:
     if is_torch_available():
         from .adapter import MultiAdapter, T2IAdapter
         from .autoencoders import (
